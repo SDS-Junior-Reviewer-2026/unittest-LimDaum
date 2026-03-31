@@ -24,4 +24,9 @@ public class Calculator {
         }
         return result;
     }
+
+    public int divide(int a, int b) {
+        int result = 0;
+        return result;
+    }
 }

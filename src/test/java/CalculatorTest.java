@@ -18,8 +18,8 @@ class CalculatorTest {
     Calculator calc;
 
     @Test
-    void addTest() {
-        when(mockAdder.add(anyInt(), anyInt())).thenAnswer(
+    void calcTest() {
+        when(calc.add(anyInt(), anyInt())).thenAnswer(
                 invoc -> {
                     int firstArg = invoc.getArgument(0);
                     int secondArg = invoc.getArgument(1);
@@ -28,31 +28,7 @@ class CalculatorTest {
         );
 
         assertThat(5).isEqualTo(calc.add(2, 3));
-    }
-
-    @Test
-    void subtract() {
-        when(mockAdder.add(anyInt(), anyInt())).thenAnswer(
-                invoc -> {
-                    int firstArg = invoc.getArgument(0);
-                    int secondArg = invoc.getArgument(1);
-                    return firstArg - secondArg;
-                }
-        );
-
-        assertThat(-1).isEqualTo(calc.add(2, 3));
-    }
-
-    @Test
-    void multiply() {
-        when(mockAdder.add(anyInt(), anyInt())).thenAnswer(
-                invoc -> {
-                    int firstArg = invoc.getArgument(0);
-                    int secondArg = invoc.getArgument(1);
-                    return firstArg * secondArg;
-                }
-        );
-
-        assertThat(6).isEqualTo(calc.add(2, 3));
+        assertThat(-1).isEqualTo(calc.subtract(2, 3));
+        assertThat(6).isEqualTo(calc.multiply(2, 3));
     }
 }
