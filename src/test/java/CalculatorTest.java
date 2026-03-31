@@ -19,7 +19,7 @@ class CalculatorTest {
 
     @Test
     void calcTest() {
-        when(calc.add(anyInt(), anyInt())).thenAnswer(
+        when(mockAdder.add(anyInt(), anyInt())).thenAnswer(
                 invoc -> {
                     int firstArg = invoc.getArgument(0);
                     int secondArg = invoc.getArgument(1);
