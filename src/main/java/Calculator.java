@@ -27,6 +27,23 @@ public class Calculator {
 
     public int divide(int a, int b) {
         int result = 0;
+        boolean isMinus = a*b<0;
+
+        a = Math.abs(a);
+        b =  Math.abs(b);
+
+        while (a>=b) {
+            result++;
+            a = adder.add(a, -b);
+        }
+
+        if (isMinus)
+            result = -result;
+
         return result;
+    }
+
+    public static void main(String[] args) {
+
     }
 }

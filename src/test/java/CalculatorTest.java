@@ -30,5 +30,6 @@ class CalculatorTest {
         assertThat(5).isEqualTo(calc.add(2, 3));
         assertThat(-1).isEqualTo(calc.subtract(2, 3));
         assertThat(6).isEqualTo(calc.multiply(2, 3));
+        assertThat(5).isEqualTo(calc.divide(10, 2));
     }
 }
